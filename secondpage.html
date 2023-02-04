@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Magic World</title>
+</head>
+<body>
+    <audio id="music" loop autoplay>
+        <source src="default.mp3" type="audio/mpeg">
+      </audio>
+      <script>
+        var audio = document.getElementById("music");
+        audio.volume = 0.2;
+      </script>
+    <div class="border">
+        <div class="inner-border">
+            <div class="image"></div><br>
+            <div class="heart-btn">
+                <div class="content">
+                  <span class="heart"></span>
+                  <span class="text">&nbsp;Accept</span>
+                </div>
+              </div><br>
+
+              <div class="heart-btn-2">
+                <div class="content-2">
+                  <span class="text-2">&nbsp;Reject</span>
+                </div>
+              </div>
+
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          $('.content').click(function(){
+            $('.content').toggleClass("heart-active")
+            $('.text').toggleClass("heart-active")
+            $('.heart').toggleClass("heart-active")
+          });
+        });
+      </script>
+</body>
+</html>
